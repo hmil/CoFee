@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CoFee</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_new_count">Link new count</string>
+    <string name="title_activity_count">$fee_name</string>
+    <string name="action_history">History</string>
+    <string name="action_add_coffee_type">Add coffee type</string>
+    <string name="action_clean_slate">Clean slate</string>
+    <string name="action_goto_list">Other counts</string>
+</resources>

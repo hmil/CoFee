@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_history"
+        android:title="@string/action_history"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_add_coffee_type"
+        android:title="@string/action_add_coffee_type"
+        android:orderInCategory="101"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_clean_slate"
+        android:title="@string/action_clean_slate"
+        android:orderInCategory="102"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_goto_list"
+        android:title="@string/action_goto_list"
+        android:orderInCategory="103"
+        app:showAsAction="never" />
+</menu>
