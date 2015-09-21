@@ -1,6 +1,7 @@
 package fr.hmil.cofee;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -46,14 +47,25 @@ public class CountActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_goto_list) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            return true;
-        }
+        Intent intent;
 
-        return super.onOptionsItemSelected(item);
+        switch(id) {
+            case R.id.action_goto_list:
+                intent = new Intent(this, MainActivity.class);
+                intent.putExtra(Definitions.IEXTRA_SKIP_REDIRECT, true);
+                startActivity(intent);
+                return true;
+            case R.id.action_buy_capsules:
+                intent = new Intent(this, BuyCapsulesActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_history:
+                intent = new Intent(this, HistoryActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

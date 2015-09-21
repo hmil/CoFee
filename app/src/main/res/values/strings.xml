@@ -7,4 +7,8 @@
     <string name="action_add_coffee_type">Add coffee type</string>
     <string name="action_clean_slate">Clean slate</string>
     <string name="action_goto_list">Other counts</string>
+    <string name="action_buy_capsules">Buy capsules</string>
+    <string name="action_sync">Sync</string>
+    <string name="title_activity_buy_capsules">Buy capsules</string>
+    <string name="title_activity_history">Count History</string>
 </resources>

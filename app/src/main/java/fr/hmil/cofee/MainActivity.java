@@ -1,6 +1,7 @@
 package fr.hmil.cofee;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,6 +22,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+        boolean skipRedirect = intent.getBooleanExtra(Definitions.IEXTRA_SKIP_REDIRECT, false);
+
+        // Redirect to active count if needed
+        SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+        if (prefs.contains(Definitions.PREF_ACTIVE_COUNT) && !skipRedirect) {
+            gotoCount(prefs.getString(Definitions.PREF_ACTIVE_COUNT, null));
+            // Don't waste time populating the activity as we will kill it right away
+            return;
+        }
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -69,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void gotoCount(CharSequence name) {
+
+        SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+        prefs.edit().putString(Definitions.PREF_ACTIVE_COUNT, name.toString()).commit();
+
         Intent intent = new Intent(MainActivity.this, CountActivity.class);
         intent.putExtra(Definitions.IEXTRA_COUNT_NAME, name);
         // Clear back stack
