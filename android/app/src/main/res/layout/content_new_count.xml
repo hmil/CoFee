@@ -17,12 +17,13 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
+            android:id="@+id/newCountSecret"
+            android:hint="XYZ..."
             android:layout_below="@+id/textView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_toLeftOf="@+id/button2"
-            android:layout_toStartOf="@+id/button2" />
+            android:layout_toLeftOf="@+id/addCountButton"
+            android:layout_toStartOf="@+id/addCountButton" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ok"
-            android:id="@+id/button2"
+            android:id="@+id/addCountButton"
             android:layout_below="@+id/textView"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
@@ -59,12 +60,23 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newCountName"
+            android:hint="New count name"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create a new count"
-            android:id="@+id/button"
-            android:layout_below="@+id/textView2"
+            android:id="@+id/createCountButton"
+            android:layout_below="@+id/newCountName"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 

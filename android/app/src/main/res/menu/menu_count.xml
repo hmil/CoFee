@@ -25,4 +25,9 @@
         android:title="@string/action_sync"
         android:orderInCategory="100"
         app:showAsAction="never" />
+
+    <item android:id="@+id/action_logout"
+        android:title="Logout"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
 </menu>

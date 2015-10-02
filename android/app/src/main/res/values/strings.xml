@@ -11,4 +11,7 @@
     <string name="action_sync">Sync</string>
     <string name="title_activity_buy_capsules">Buy capsules</string>
     <string name="title_activity_history">Count History</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_create_count">CreateCountActivity</string>
 </resources>

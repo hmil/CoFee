@@ -1,0 +1,11 @@
+{
+  "db": {
+    "user": "DB_USER",
+    "password": "DB_PASS",
+    "host": "localhost",
+    "database": "cofee"
+  },
+  "secz": {
+    "pwdSalt": "SALT_FOR_PASSWORDS"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "CoFee",
+  "version": "1.0.0",
+  "description": "coffee expense sharing app server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hmil.fr",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.0",
+    "coffee-script": "^1.10.0",
+    "cookie-parser": "^1.4.0",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1",
+    "mysql": "^2.9.0"
+  }
+}
